@@ -20,7 +20,7 @@ const HomePage = () => {
   }, []);
 
   return (
- <div className="home-page">
+    <div className="home-page">
       {/* Navigation */}
       <nav className="navbar">
         <div className="nav-container">
@@ -79,33 +79,55 @@ const HomePage = () => {
               <h3>Sustainable Practices</h3>
               <p>We're committed to environmentally friendly practices from bean to cup.</p>
             </div>
+            {/* <div className="feature-card">
+              <div className="feature-icon">🏠</div>
+              <h3>Cozy Atmosphere</h3>
+              <p>Enjoy our warm and welcoming space designed for comfort and relaxation.</p>
+            </div> */}
           </div>
         </div>
       </section>
 
       {/* Menu Preview Section */}
-      <section id="menu" className="menu-preview">
-        <div className="container">
-          <h2 className="section-title">Customer Favorites</h2>
-          <div className="menu-grid">
-            <div className="menu-item">
-              <div className="menu-item-image espresso"></div>
-              <h3>Espresso</h3>
-              <p>Rich, bold and full-bodied</p>
+          <section id="menu" className="menu-preview">
+            <div className="container">
+              <h2 className="section-title">Customer Favorites</h2>
+              <div className="menu-grid">
+                <div className="menu-item">
+                  <div 
+                    className="menu-item-image"
+                    style={{backgroundImage: "url('https://images.unsplash.com/photo-1559056199-641a0ac8b55e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80')"}}
+                  ></div>
+                  <h3>Espresso</h3>
+                  <p>Rich, bold and full-bodied</p>
+                </div>
+                <div className="menu-item">
+                  <div 
+                    className="menu-item-image"
+                    style={{backgroundImage: "url('https://images.unsplash.com/photo-1561047029-3000c68339ca?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80')"}}
+                  ></div>
+                  <h3>Cappuccino</h3>
+                  <p>Perfect balance of espresso, steamed milk and foam</p>
+                </div>
+                <div className="menu-item">
+                  <div 
+                    className="menu-item-image"
+                    style={{backgroundImage: "url('https://images.unsplash.com/photo-1561047029-3000c68339ca?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80')"}}
+                  ></div>
+                  <h3>Latte</h3>
+                  <p>Smooth and creamy with a delicate coffee taste</p>
+                </div>
+                <div className="menu-item">
+                  <div 
+                    className="menu-item-image"
+                    style={{backgroundImage: "url('https://images.unsplash.com/photo-1572442388796-11668a67e53d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1135&q=80')"}}
+                  ></div>
+                  <h3>Mocha</h3>
+                  <p>Chocolate-infused coffee delight with whipped cream</p>
+                </div>
+              </div>
             </div>
-            <div className="menu-item">
-              <div className="menu-item-image cappuccino"></div>
-              <h3>Cappuccino</h3>
-              <p>Perfect balance of espresso, steamed milk and foam</p>
-            </div>
-            <div className="menu-item">
-              <div className="menu-item-image latte"></div>
-              <h3>Latte</h3>
-              <p>Smooth and creamy with a delicate coffee taste</p>
-            </div>
-          </div>
-        </div>
-      </section>
+          </section>
 
       {/* About Section */}
       <section id="about" className="about">
