@@ -99,7 +99,7 @@ body {
   height: 100%;
   background-size: cover;
   background-position: center;
-  transition: opacity 0.5s ease-in-out;
+  transition: opacity 1s ease-in-out;
   z-index: 1;
 }
 
@@ -146,6 +146,8 @@ body {
 
 .cta-button:hover {
   background-color: #3E2723;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 @keyframes fadeIn {
@@ -174,7 +176,7 @@ section {
 /* Features Section */
 .features-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
 }
 
@@ -183,11 +185,13 @@ section {
   padding: 2rem;
   border-radius: 10px;
   background-color: #F5F5F5;
-  transition: transform 0.3s;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
 }
 
 .feature-card:hover {
   transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
 }
 
 .feature-icon {
@@ -196,6 +200,10 @@ section {
 }
 
 /* Menu Preview */
+.menu-preview {
+  background-color: #F9F5F2;
+}
+
 .menu-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -204,6 +212,15 @@ section {
 
 .menu-item {
   text-align: center;
+  background: white;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s;
+}
+
+.menu-item:hover {
+  transform: translateY(-5px);
 }
 
 .menu-item-image {
@@ -214,30 +231,25 @@ section {
   margin-bottom: 15px;
 }
 
-.espresso {
-  background-color: #4E342E;
-}
-
-.cappuccino {
-  background-color: #D7CCC8;
-}
-
-.latte {
-  background-color: #BCAAA4;
-}
-
 /* About Section */
 .about-content {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3rem;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
+  gap: 3rem;
+}
+
+.about-text {
+  flex: 1;
 }
 
 .about-image {
-  height: 300px;
-  background-color: #A1887F;
-  border-radius: 10px;
+  flex: 1;
+  height: 400px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .secondary-button {
@@ -262,6 +274,15 @@ section {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 3rem;
+}
+
+.contact-info h3 {
+  margin-top: 1.5rem;
+  color: #5D4037;
+}
+
+.contact-info h3:first-child {
+  margin-top: 0;
 }
 
 .map-placeholder {
@@ -291,24 +312,58 @@ section {
   color: white;
   margin-left: 1rem;
   text-decoration: none;
+  transition: opacity 0.3s;
+}
+
+.social-links a:hover {
+  opacity: 0.8;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  .nav-container {
+    flex-direction: column;
+    padding: 1rem;
+  }
+  
   .nav-menu {
-    display: none; /* For simplicity, in a real project you'd add a hamburger menu */
+    margin-top: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .nav-item {
+    margin: 0.5rem;
   }
   
   .hero-title {
     font-size: 2.5rem;
   }
   
-  .about-content, .contact-content {
+  .hero-subtitle {
+    font-size: 1.2rem;
+  }
+  
+  .about-content {
+    flex-direction: column;
+  }
+  
+  .about-image {
+    width: 100%;
+    margin-top: 30px;
+  }
+  
+  .contact-content {
     grid-template-columns: 1fr;
   }
   
   .footer .container {
     flex-direction: column;
     gap: 1rem;
+  }
+  
+  .features-grid,
+  .menu-grid {
+    grid-template-columns: 1fr;
   }
 }
